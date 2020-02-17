@@ -12,3 +12,8 @@
   - [HASH](/commands/hash.md)
   - [ZSET](/commands/zset.md)
   - [其他](/commands/others.md)
+- 持久化
+  - [RDB](/persistence/rdb.md)
+  - [AOF](/persistence/aof.md)
+  - [对比](/persistence/compare.md)
+  - [场景](/persistence/case.md)
