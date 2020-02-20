@@ -11,17 +11,17 @@
 - m 返回权限验证结果
 - s 的当前主节点 id = cmid，s 接受 m 返回的 mid，假设是全量复制（从未同步、或者 cmid != mid）
   - s 发起 `psync mid -1`
-  - m 返回 `FULLRESYNC mid mOffset`，主节点命令字节长度=mOffset 
+  - m 返回 `FULLRESYNC mid mOffset`，主节点命令字节长度 = mOffset 
     - 同时，s 保存 mid mOffset
-    - 同时，m 执行 `bgsave`，保存 rdb，并把 `bgsave` 之后执行的命令加入 buffer 中
-  - m 发送 rdb
-  - s 接受 rdb
-  - s 发送 buffer
-  - m 接受 buffer
+    - 同时，m 执行 `bgsave`，保存 rdb，并把 `bgsave` 之后执行的命令加入 `buffer` 中
+  - m 发送 `rdb`
+  - s 接受 `rdb`
+  - s 发送 `buffer`
+  - m 接受 `buffer`
   - s 执行 `flushall`
-  - s 加载接收的 rdb
-  - s 加载接收的 buffer
-  - 如果 s 开启了 aof，打开 aof
+  - s 加载接收的 `rdb`
+  - s 加载接收的 `buffer`
+  - 如果 s 开启了 `aof`，打开 `aof`
 - s 的当前主节点 id = cmid，s 接受 m 返回的 mid，假设是增量复制（cmid == mid，mOffset != sOffset，中途断线）
   - s 发起 `psync mid sOffset`
   - m 比较 mOffset 和 从节点命令字节长度 sOffset，不相等，发送 `CONTINUE`
