@@ -16,3 +16,7 @@
   - [RDB & AOF](/persistence/rdbaof.md)
 - 复制
   - [主从复制](/replica/masterSlave.md)
+- 实践
+  - [缓存](/practice/cache.md)
+  - [数据一致性](/practice/consistency.md)
+  - [扫描键](/practice/scanKey.md)
