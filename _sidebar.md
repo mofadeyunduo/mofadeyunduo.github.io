@@ -14,8 +14,9 @@
   - [其他](/commands/others.md)
 - 持久化
   - [RDB & AOF](/persistence/rdbaof.md)
-- 复制
-  - [主从复制](/replica/masterSlave.md)
+- 高可用
+  - [主从复制](/ha/masterSlave.md)
+  - [哨兵](/ha/sentinel.md)
 - 实践
   - [缓存](/practice/cache.md)
   - [数据一致性](/practice/consistency.md)
