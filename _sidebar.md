@@ -15,8 +15,9 @@
 - 持久化
   - [RDB & AOF](/persistence/rdbaof.md)
 - 高可用
-  - [主从复制](/ha/masterSlave.md)
+  - [主从复制](/ha/replica.md)
   - [哨兵](/ha/sentinel.md)
+  - [集群](/ha/cluster.md)
 - 实践
   - [缓存](/practice/cache.md)
   - [数据一致性](/practice/consistency.md)
