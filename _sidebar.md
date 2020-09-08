@@ -1,24 +1,29 @@
 <!-- docs/_sidebar.md -->
-
-- 介绍
-  - [简介](/introduction/preface.md)
-  - [FAQ](/introduction/faq.md)
-- 安装
-  - [环境](/install/installation.md)
-- 命令
-  - [STRING](/commands/string.md)
-  - [LIST](/commands/list.md) 
-  - [SET](/commands/set.md)
-  - [HASH](/commands/hash.md)
-  - [ZSET](/commands/zset.md)
-  - [其他](/commands/others.md)
-- 持久化
-  - [RDB & AOF](/persistence/rdbaof.md)
-- 高可用
-  - [主从复制](/ha/replica.md)
-  - [哨兵](/ha/sentinel.md)
-  - [集群](/ha/cluster.md)
-- 实践
-  - [缓存](/practice/cache.md)
-  - [数据一致性](/practice/consistency.md)
-  - [扫描键](/practice/scanKey.md)
+- [关于](/README.md)
+- Redis 进阶
+  - 介绍
+    - [适用范围](/redis/README.md)
+    - [简介](/redis/introduction/preface.md)
+    - [FAQ](/redis/introduction/faq.md)
+  - 安装
+    - [环境对比](/redis/install/installation.md)
+  - 进阶命令用法
+    - [STRING](/redis/commands/string.md)
+    - [LIST](/redis/commands/list.md) 
+    - [SET](/redis/commands/set.md)
+    - [HASH](/redis/commands/hash.md)
+    - [ZSET](/redis/commands/zset.md)
+    - [其他](/redis/commands/others.md)
+  - 持久化原理
+    - [RDB & AOF](/redis/persistence/rdbaof.md)
+  - 高可用原理
+    - [主从复制](/redis/ha/replica.md)
+    - [哨兵](/redis/ha/sentinel.md)
+    - [集群](/redis/ha/cluster.md)
+  - 常见实践
+    - [缓存](/redis/practice/cache.md)
+    - [数据一致性](/redis/practice/consistency.md)
+    - [扫描键](/redis/practice/scanKey.md)
+- Golang 源码
+  - json
+    - [unmarshal](/golang/json/unmarshal.md)
