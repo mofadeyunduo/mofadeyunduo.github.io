@@ -24,6 +24,9 @@
     - [缓存](/redis/practice/cache.md)
     - [数据一致性](/redis/practice/consistency.md)
     - [扫描键](/redis/practice/scanKey.md)
-- Golang 源码
-  - json
-    - [unmarshal](/golang/json/unmarshal.md)
+- Golang
+  - 源码
+    - json
+      - [unmarshal](/golang/code/json/unmarshal.md)
+  - 概念
+    - [协程](/golang/concept/goroutine.md)
