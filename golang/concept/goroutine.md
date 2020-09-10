@@ -1,3 +1,7 @@
+## Golang 版本
+
+1.13
+
 ## Goroutine 模型
  
 参考 [GMP](https://learnku.com/articles/41728)。
