@@ -159,7 +159,8 @@ func appendSorted(es []muxEntry, e muxEntry) []muxEntry {
 
 上面已经说了路由的规则，这里就是具体代码实现。
 
-所有的 HTTP 处理最后都走到了这个接口上。
+HTTP 处理器分为两种，一种实现 interface Handler：
+
 ```go
 // A Handler responds to an HTTP request.
 //
@@ -190,7 +191,22 @@ type Handler interface {
 }
 ```
 
-这个接口实现的一般是 ServerMux，Mux 的含义是多路复用器。
+另一种是 func，该 func 实现了 Handler 接口，这里比较让人惊奇的是，func 也能实现接口：
+
+```go
+// The HandlerFunc type is an adapter to allow the use of
+// ordinary functions as HTTP handlers. If f is a function
+// with the appropriate signature, HandlerFunc(f) is a
+// Handler that calls f.
+type HandlerFunc func(ResponseWriter, *Request)
+
+// ServeHTTP calls f(w, r).
+func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
+	f(w, r)
+}
+```
+
+interface Handler 大多数 impl 是 ServerMux，Mux 的含义是多路复用器。
 ```go
 // ServeHTTP dispatches the request to the handler whose
 // pattern most closely matches the request URL.
