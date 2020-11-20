@@ -1,5 +1,8 @@
 <!-- docs/_sidebar.md -->
 - [关于](/README.md)
+- 数据库
+  - 概念
+    - [事务](/db/concept/tx.md)
 - Redis 进阶
   - 介绍
     - [适用范围](/redis/README.md)
